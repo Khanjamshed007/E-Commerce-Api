@@ -23,7 +23,6 @@ const allProducts = async (req, res) => {
 
 // Creating a new product in our Database
 const newProduct = async (req, res) => {
-    console.log(req.body);
     try {
         const product = await Product.create(req.body);
         res.status(201).json({
